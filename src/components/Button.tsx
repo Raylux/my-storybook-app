@@ -3,7 +3,7 @@ import React, { useState } from "react";
 type ButtonProps = {
     label: string;
     onClick:  () => Promise<void>;
-    isDisabled: boolean;
+    isDisabled?: boolean;
 }
 
 /**
@@ -20,6 +20,7 @@ export const Button: React.FC<ButtonProps> = ({ label, onClick, isDisabled = fal
         setDisabled(true);
 
         await onClick();
+
         setDisabled(false);
     }
 
