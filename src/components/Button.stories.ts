@@ -11,9 +11,22 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+const onClick = async () => {
+     setTimeout(() => console.log("Clicked!"), 5000);
+}
+
+export const Default: Story = {
     args: {
         label: "Click me",
-        onClick: () => alert("Clicked!"),
+        onClick: onClick,
     }
 }
+
+export const Disabled: Story = {
+    args: {
+        label: "Click me",
+        onClick: onClick,
+        isDisabled: true,
+    }
+}
+
