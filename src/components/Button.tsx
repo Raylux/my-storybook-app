@@ -3,7 +3,7 @@ import React, { useState } from "react";
 type ButtonProps = {
     label: string;
     onClick:  () => Promise<void>;
-    isDisabled?: boolean;
+    isDisabled: boolean;
 }
 
 /**
