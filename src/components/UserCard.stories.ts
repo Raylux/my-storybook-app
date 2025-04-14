@@ -27,6 +27,13 @@ export const NoName: Story = {
     }
 }
 
+export const NoEmail: Story = {
+    args: {
+        name: "Mario Rossi",
+        email: ""
+    }
+}
+
 export const WithInteraction: Story = {
     args: {
         name: "Mario Rossi",
